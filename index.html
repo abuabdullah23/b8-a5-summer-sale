@@ -1,62 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Summer Sale</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./style/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Sale</title>
 
-    <!-- CSS Linking -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style/style.css" />
 
-    <!-- Custom Tailwind CSS -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "summer-main": "#F85559",
-              "summer-gray": "rgba(18, 18, 18, 0.60)",
-              "summer-light-gray": "rgba(18, 18, 18, 0.10)",
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-  <body>
-    <!-- Banner Section -->
-    <header class="bg-[#F9F6E2] p-5 md:p-10 lg:p-16">
-      <div class="container mx-auto px-4 md:px-8 lg:px-16 lg:flex items-center">
-        <div
-          class="w-full lg:w-1/2 text-center flex flex-col gap-5 md:gap-11 lg:gap-14 items-center"
-        >
-          <h3 class="font-medium text-lg md:text-3xl">---SALE FEVER---</h3>
-          <h1 class="font-bold text-3xl md:text-6xl lg:text-5xl">
-            Purchase TK 200 or above & get
-            <span class="text-[#E527B2]">20% off</span>
-          </h1>
-          <div class="flex gap-4 items-center">
-            <p class="text-xl font-medium">Use Promo Code</p>
-            <button
-              class="py-2 px-4 rounded-md text-white text-xl font-semibold bg-[#E527B2]"
-            >
-              SELL200
-            </button>
-          </div>
-        </div>
-        <div
-          class="w-full lg:w-1/2 mt-10 md:mt-0 flex items-center justify-center"
-        >
-          <div>
-            <img src="./images/Summer 1.png" alt="" />
-          </div>
+  <!-- CSS Linking -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <!-- Banner Section -->
+  <header class="bg-[#F9F6E2] p-5 md:p-10 lg:p-16">
+    <div class="container mx-auto px-4 md:px-8 lg:px-16 lg:flex items-center">
+      <div class="w-full lg:w-1/2 text-center flex flex-col gap-5 md:gap-11 lg:gap-14 items-center">
+        <h3 class="font-medium text-lg md:text-3xl">---SALE FEVER---</h3>
+        <h1 class="font-bold text-3xl md:text-6xl lg:text-5xl">
+          Purchase TK 200 or above & get
+          <span class="text-[#E527B2]">20% off</span>
+        </h1>
+        <div class="flex gap-4 items-center">
+          <p class="text-xl font-medium">Use Promo Code</p>
+          <button class="py-2 px-4 rounded-md text-white text-xl font-semibold bg-[#E527B2]">
+            SELL200
+          </button>
         </div>
       </div>
-    </header>
+      <div class="w-full lg:w-1/2 mt-10 md:mt-0 flex items-center justify-center">
+        <div>
+          <img src="./images/Summer 1.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <main></main>
-  </body>
+  <main class="container mx-auto px-4 md:px-8 lg:px-16 mt-16">
+    <!-- Main Section -->
+    <section class="lg:flex gap-5">
+      <!-- Left side : Card section -->
+      <div class="w-full lg:w-3/4 flex flex-col gap-10">
+        <!-- Kitchenware -->
+        <div>
+          <h2 class="font-semibold text-4xl mb-7">Kitchenware</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- product 1 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod1.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">kitchen Wooden</h3>
+              <p class="text-[#11111180] text-lg"><span>39.00</span> TK</p>
+            </div>
+            <!-- product 2 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod2.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Cutting Board</h3>
+              <p class="text-[#11111180] text-lg"><span>25.00</span> TK</p>
+            </div>
+
+            <!-- product 3 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod3.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Home Cooker</h3>
+              <p class="text-[#11111180] text-lg"><span>49.00</span> TK</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kitchenware -->
+        <div>
+          <h2 class="font-semibold text-4xl mb-7">Sportswear</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- product 1 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod4.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Sports Back Cap</h3>
+              <p class="text-[#11111180] text-lg"><span>49.00</span> TK</p>
+            </div>
+            <!-- product 2 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod5.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Full Jersey Set</h3>
+              <p class="text-[#11111180] text-lg"><span>69.00</span> TK</p>
+            </div>
+
+            <!-- product 3 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod6.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Sports cates</h3>
+              <p class="text-[#11111180] text-lg"><span>159.00</span> TK</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Furniture -->
+        <div>
+          <h2 class="font-semibold text-4xl mb-7">Furniture</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- product 1 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod7.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-outline.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Single Relax Chair</h3>
+              <p class="text-[#11111180] text-lg"><span>185.00</span> TK</p>
+            </div>
+            <!-- product 2 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod8.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Children play</h3>
+              <p class="text-[#11111180] text-lg"><span>299.00</span> TK</p>
+            </div>
+
+            <!-- product 3 -->
+            <div class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center">
+              <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
+                <img class="h-32" src="./images/prod9.png" alt="Product Image" />
+              </div>
+              <div class="flex items-center mt-3">
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+                <img src="./images/svg/rating-fill.svg" alt="rating icon" />
+              </div>
+              <h3 class="text-xl font-semibold">Flexible Sofa</h3>
+              <p class="text-[#11111180] text-lg"><span>339.00</span> TK</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Sidebar : Cart Section-->
+      <div class="w-full lg:w-1/4 mt-16">
+        right side
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
