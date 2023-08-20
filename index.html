@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Sale</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- CSS Linking -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind CSS -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "summer-main": "#F85559",
+              "summer-gray": "rgba(18, 18, 18, 0.60)",
+              "summer-light-gray": "rgba(18, 18, 18, 0.10)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Banner Section -->
+    <header class="bg-[#F9F6E2] p-5 md:p-10 lg:p-16">
+      <div class="container mx-auto px-4 md:px-8 lg:px-16 lg:flex items-center">
+        <div
+          class="w-full lg:w-1/2 text-center flex flex-col gap-5 md:gap-11 lg:gap-14 items-center"
+        >
+          <h3 class="font-medium text-lg md:text-3xl">---SALE FEVER---</h3>
+          <h1 class="font-bold text-3xl md:text-6xl lg:text-5xl">
+            Purchase TK 200 or above & get
+            <span class="text-[#E527B2]">20% off</span>
+          </h1>
+          <div class="flex gap-4 items-center">
+            <p class="text-xl font-medium">Use Promo Code</p>
+            <button
+              class="py-2 px-4 rounded-md text-white text-xl font-semibold bg-[#E527B2]"
+            >
+              SELL200
+            </button>
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-1/2 mt-10 md:mt-0 flex items-center justify-center"
+        >
+          <div>
+            <img src="./images/Summer 1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+  </body>
+</html>
