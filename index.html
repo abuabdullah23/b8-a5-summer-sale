@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./style/style.css" />
 
   <!-- CSS Linking -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
@@ -39,7 +40,7 @@
     </div>
   </header>
 
-  <main class="container mx-auto px-4 md:px-8 lg:px-16 my-16">
+  <main class="container mx-auto px-4 md:px-8 lg:px-16 py-16 ">
     <!-- Main Section -->
     <section class="lg:flex gap-5">
       <!-- Left side : Card section -->
@@ -49,7 +50,7 @@
           <h2 class="font-semibold text-4xl mb-7">Kitchenware</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <!-- product 1 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod1.png" alt="Product Image" />
@@ -65,7 +66,7 @@
               <p class="text-[#11111180] text-lg"><span>39.00</span> TK</p>
             </div>
             <!-- product 2 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod2.png" alt="Product Image" />
@@ -82,7 +83,7 @@
             </div>
 
             <!-- product 3 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod3.png" alt="Product Image" />
@@ -105,7 +106,7 @@
           <h2 class="font-semibold text-4xl mb-7">Sportswear</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <!-- product 1 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod4.png" alt="Product Image" />
@@ -121,7 +122,7 @@
               <p class="text-[#11111180] text-lg"><span>49.00</span> TK</p>
             </div>
             <!-- product 2 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod5.png" alt="Product Image" />
@@ -138,7 +139,7 @@
             </div>
 
             <!-- product 3 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod6.png" alt="Product Image" />
@@ -161,7 +162,7 @@
           <h2 class="font-semibold text-4xl mb-7">Furniture</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <!-- product 1 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod7.png" alt="Product Image" />
@@ -177,7 +178,7 @@
               <p class="text-[#11111180] text-lg"><span>185.00</span> TK</p>
             </div>
             <!-- product 2 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod8.png" alt="Product Image" />
@@ -194,7 +195,7 @@
             </div>
 
             <!-- product 3 -->
-            <div
+            <div onclick="addToCart(this)"
               class="bg-white rounded-lg p-5 flex flex-col gap-1 text-center items-center cursor-pointer hover:scale-105 transition">
               <div class="w-full bg-[#1111110D] rounded-lg flex items-center justify-center py-7">
                 <img class="h-32" src="./images/prod9.png" alt="Product Image" />
@@ -215,23 +216,24 @@
       </div>
 
       <!-- Right Sidebar : Cart Section-->
-      <div class="w-full lg:w-1/4 mt-16">
+      <div class="w-full lg:w-1/4 mt-16 pb-16">
         <!-- Coupon Section -->
         <div class="p-5 bg-white rounded-xl">
           <h2 class="text-2xl font-medium">Have coupon?</h2>
           <div class="relative mt-3">
-            <input type="text" placeholder="Coupon Code" class="border border-gray-300 py-3 px-4 w-full rounded-md">
+            <input id="coupon-field" type="text" placeholder="Coupon Code"
+              class="border border-gray-300 py-3 px-4 w-full rounded-md">
             <!-- Coupon Apply Button -->
-            <button
-              class="bg-[#E527B2] hover:bg-[#c01592] py-3 px-4 text-white font-semibold rounded-r-md absolute right-0 h-full">Apply</button>
+            <button disabled id="coupon-apply-btn"
+              class="py-3 px-4 bg-[#E527B2] text-white font-semibold rounded-r-md absolute right-0 h-full">Apply</button>
           </div>
         </div>
 
         <!-- Cart Calculate Section -->
         <div class="p-5 bg-white rounded-xl mt-5 flex flex-col gap-4 relative">
           <!-- Products List -->
-          <ol class="font-semibold text-xl">
-
+          <ol id="selected-products" class="font-semibold text-xl list-decimal pl-5">
+            <!-- Dynamic Data  -->
           </ol>
 
           <hr>
@@ -240,32 +242,48 @@
           <div class="flex flex-col gap-4">
             <!-- Total price -->
             <div class="flex items-center gap-3 font-semibold text-xl">
-              <h3 class="">Total Price:</h3>
-              <h3 class="text-gray-400"> 00 <span>TK</span></h3>
+              <h3>Total Price:</h3>
+              <h3 id="total-price" class="text-gray-400"> 00 </h3><span class="text-gray-400">TK</span>
             </div>
 
             <!-- Discount price -->
             <div class="flex items-center gap-3 font-semibold text-xl">
-              <h3 class="">Discount:</h3>
-              <h3 class="text-gray-400"> 00 <span>TK</span></h3>
+              <h3>Discount:</h3>
+              <h3 id="discount" class="text-gray-400"> 00 </h3><span class="text-gray-400">TK</span>
             </div>
 
             <!-- Grand Total price -->
             <div class="flex items-center gap-3 font-semibold text-xl">
-              <h3 class="">Total:</h3>
-              <h3 class="text-gray-400"> 00 <span>TK</span></h3>
+              <h3>Total:</h3>
+              <h3 id="grand-total" class="text-gray-400"> 00 </h3><span class="text-gray-400">TK</span>
             </div>
             <hr class="mb-8">
           </div>
 
           <!-- Make Purchase Button -->
-          <button
-            class="bg-[#E527B2] hover:bg-[#c01592] py-3 px-4 text-white font-semibold rounded-md absolute w-10/12 left-1/2 -translate-x-1/2 -bottom-5">Make
+
+          <button onclick="my_modal_5.showModal()" disabled id="purchase-btn" href="#my_modal_8"
+            class="bg-[#E527B2] py-3 px-4 text-white font-semibold rounded-md absolute w-10/12 left-1/2 -translate-x-1/2 -bottom-5">Make
             Purchase</button>
+
+          <!-- Modal -->
+          <dialog id="my_modal_5" class="modal modal-middle sm:modal-middle p-5 lg:p-16">
+            <div class="modal-box flex flex-col items-center justify-center gap-2 lg:gap-4 text-center">
+              <img src="./images/congo.png" alt="modal image">
+              <h3 class="font-bold text-3xl lg:text-5xl">Congratulations</h3>
+              <p class="text-lg lg:text-xl">Your Purchase the product</p>
+              <a href="/" class="bg-[#E527B2] text-white text-xl font-semibold rounded-md py-2 px-4">Go Home</a>
+            </div>
+          </dialog>
+
         </div>
       </div>
+
     </section>
   </main>
+
+  <!-- JS File Linked -->
+  <script src="./js/summer.js"></script>
 </body>
 
 </html>
