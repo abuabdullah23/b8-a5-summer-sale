@@ -21,18 +21,22 @@ function addToCart(target) {
     total = total + price;
 
     // set total price
-    totalPrice.innerText = total + '.00';
+    totalPrice.innerText = (total).toFixed(2);
 
     // enable or disable coupon apply btn
     if (total >= 200) {
         const couponApplyBtn = document.getElementById('coupon-apply-btn');
         couponApplyBtn.removeAttribute('disabled')
+        couponApplyBtn.classList.add('bg-[#E527B2]')
+        couponApplyBtn.classList.remove('bg-gray-400')
     }
 
     // purchase button function
     const purchaseBtn = document.getElementById('purchase-btn');
     if (total > 0) {    // enabled if total > 0;
         purchaseBtn.removeAttribute('disabled');
+        purchaseBtn.classList.add('bg-[#E527B2]')
+        purchaseBtn.classList.remove('bg-gray-400')
     }
 }
 
@@ -46,7 +50,6 @@ couponApplyBtn.addEventListener('click', function () {
         // Calculation
         const discountAmount = total * .20;
         discount.innerText = discountAmount.toFixed(2);
-        grandTotal.innerText = (total - discountAmount);
-
+        grandTotal.innerText = (total - discountAmount).toFixed(2);
     } else { alert('Not matched your coupon!') }
 })
